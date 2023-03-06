@@ -278,10 +278,6 @@ ul {
   border-radius: 4px;
 }
 
-.input-footer:focus {
-  outline: ;
-}
-
 .footer-btn {
   display: flex;
   justify-content: center;
@@ -857,10 +853,38 @@ ul {
   display: block;
   margin-bottom: 24px;
   margin-top: 16px;
+  padding-left: 24px;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: #757575;
+}
+
+.checkbox {
+  appearance: none;
+  position: absolute;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+  fill: var(--white);
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  border: 1.25px solid var(--dark);
+  border-radius: 2px;
+  transition: fill 250ms var(--time-transition),
+    background-color 250ms var(--time-transition),
+    border 250ms var(--time-transition);
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--color-secondary);
+  fill: var(--white);
+  border: none;
 }
 
 .link-modal-form {
