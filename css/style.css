@@ -245,6 +245,73 @@ ul {
   width: 24px;
   height: 24px;
 }
+.subscribe {
+  margin-left: 80px;
+}
+
+.footer-form-title {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.input-footer {
+  width: 264px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.input-footer:focus {
+  outline: ;
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  cursor: pointer;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background-color: var(--color-primary);
+  border: transparent;
+  border-radius: 4px;
+  transition: background-color 250ms var(--time-transition),
+    transform 250ms var(--time-transition);
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: var(--color-secondary);
+  transform: translateY(1px);
+}
+
+.subscribe-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--white);
+}
 
 /* Hero section */
 
@@ -681,6 +748,7 @@ ul {
   background-color: var(--white);
   transform: scale(1);
   transition: transform 250ms var(--time-transition);
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -717,11 +785,6 @@ ul {
   border: transparent;
 }
 
-.modal-form {
-  display: block;
-  padding: 72px 24px 24px 24px;
-}
-
 .text-form {
   margin-bottom: 16px;
   text-align: center;
@@ -731,6 +794,7 @@ ul {
 }
 
 .modal-label {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -739,7 +803,6 @@ ul {
   letter-spacing: 0.04em;
   font-size: 12px;
   line-height: 1.16;
-  position: relative;
   margin-bottom: 8px;
   height: 58px;
 }
@@ -752,13 +815,28 @@ ul {
   padding-top: 8px;
   padding-bottom: 8px;
   color: var(--dark);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms var(--time-transition),
+    border 250ms var(--time-transition);
 }
 
 .input-form:focus {
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
+}
+
+.input-icon {
+  position: absolute;
+  display: inline-block;
+  width: 18px;
+  height: 24px;
+  top: 21px;
+  left: 16px;
+  fill: var(--dark);
+  transition: fill 250ms var(--time-transition);
+}
+
+.input-form:focus-visible + .input-icon {
+  fill: var(--color-primary);
 }
 
 .textarea-input {
@@ -770,12 +848,27 @@ ul {
   padding-left: 16px;
 }
 
+.textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .modal-checkbox {
+  position: relative;
   display: block;
   margin-bottom: 24px;
   margin-top: 16px;
   font-size: 12px;
-  position: relative;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+
+.link-modal-form {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3333;
+  letter-spacing: 0.04em;
 }
 
 .modal-form-btn {
